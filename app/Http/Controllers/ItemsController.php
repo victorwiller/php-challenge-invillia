@@ -12,13 +12,13 @@ class ItemsController extends Controller
             if(is_array($item))
                 $this->store($idOrder, $item);
             else
-                $this->saveItem($idOrder, $item);
+                $this->create($idOrder, $item);
         }
 
         return true;
     }
 
-    private function saveItem($idOrder, $item){
+    private function create($idOrder, $item){
         $model           = new Items();
         $model->order_id = $idOrder;
         $model->title    = $item->title;

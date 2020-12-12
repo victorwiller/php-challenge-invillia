@@ -17,6 +17,7 @@ class CreateShiptoTable extends Migration
             $table->id();
             $table->bigInteger('order_id')->unsigned();
             $table->string('name');
+            $table->string('address');
             $table->string('city');
             $table->string('country');
             $table->timestamps();

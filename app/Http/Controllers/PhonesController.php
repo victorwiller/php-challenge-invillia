@@ -10,13 +10,13 @@ class PhonesController extends Controller
     public function store($idPerson, $phones){
         $phones = (array) $phones->phone;
         foreach($phones as $phone) {
-            $this->savePhone($idPerson, $phone);
+            $this->create($idPerson, $phone);
         }
 
         return true;
     }
 
-    private function savePhone($idPerson, $phone){
+    private function create($idPerson, $phone){
         $model            = new Phones();
         $model->people_id = $idPerson;
         $model->number    = $phone;

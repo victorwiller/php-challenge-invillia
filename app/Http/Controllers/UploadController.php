@@ -11,7 +11,7 @@ class UploadController extends Controller
     public function __construct(Request $request){
         $this->peoples = new PeoplesController();
         $this->orders  = new OrdersController();
-        $request->validate(['filexml' => 'bail|required']);
+        //$request->validate(['filexml' => 'bail|required']);
     }
 
     public function index() {

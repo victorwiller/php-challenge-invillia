@@ -12,4 +12,8 @@ class Phones extends Model
     protected $fillable = [
         'number'
     ];
+
+    public function people() {
+        return $this->belongsTo(Peoples::class);
+    }
 }

@@ -11,6 +11,7 @@ class ShiptoController extends Controller
         $model           = new Shipto();
         $model->order_id = $idOrder;
         $model->name     = $shipto->name;
+        $model->address  = $shipto->address;
         $model->city     = $shipto->city;
         $model->country  = $shipto->country;
         return $model->save();

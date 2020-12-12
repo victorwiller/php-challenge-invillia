@@ -17,7 +17,7 @@ class OrdersController extends Controller
 
     public function store($orders){
         foreach($orders as $order) {
-            $orderId = $this->saveOrder($order);
+            $orderId = $this->create($order);
             $this->shipto->store($orderId, $order->shipto);
             $this->items->store($orderId, $order->items);
         }
@@ -25,7 +25,7 @@ class OrdersController extends Controller
         return true;
     }
 
-    private function saveOrder($order){
+    private function create($order){
         $model              = new Orders();
         $model->id          = $order->orderid;
         $model->people_id   = $order->orderperson;

@@ -20,8 +20,8 @@ services:
         depends_on:
             - mysql
             - redis
-            # - selenium
-    # selenium:
+    #        - selenium
+    #selenium:
     #     image: 'selenium/standalone-chrome'
     #     volumes:
     #         - '/dev/shm:/dev/shm'

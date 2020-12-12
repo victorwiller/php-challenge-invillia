@@ -10,6 +10,11 @@ class Peoples extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'name'
     ];
+
+    public function phone() {
+        return $this->hasMany(Phones::class, 'people_id');
+    }
 }
