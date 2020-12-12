@@ -3,18 +3,25 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator,Redirect,Response,File;
 use App\Http\Controllers\PeoplesController;
 use App\Http\Controllers\OrdersController;
 
 class UploadController extends Controller
 {
+    protected $request;
+    protected $peoples;
+    protected $orders;
+
     public function __construct(Request $request){
+        $this->request = $request;
         $this->peoples = new PeoplesController();
         $this->orders  = new OrdersController();
-        //$request->validate(['filexml' => 'bail|required']);
     }
 
     public function index() {
+        $this->request->validate(['filexml' => 'bail|required']);
+
         $savePeople    = $saveOrders = true;
         $filesReceived = Request()->file('filexml');
         $filesConverts = $this->processFiles($filesReceived);

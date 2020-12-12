@@ -20,7 +20,7 @@ class PeoplesController extends Controller
             $this->phones->store($personId, $person->phones);
         }
 
-        return true;
+        return isset($personId);
     }
 
     private function create($person){

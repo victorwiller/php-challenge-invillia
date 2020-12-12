@@ -22,7 +22,7 @@ class OrdersController extends Controller
             $this->items->store($orderId, $order->items);
         }
 
-        return true;
+        return isset($orderId);
     }
 
     private function create($order){
