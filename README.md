@@ -23,11 +23,14 @@ Test for Invillia
   - GET  /api/orders/{idOrders}
   - GET  /upload
 
-*Note: API documented in /api/doc*
+*Note: API documented in /doc*
 
 
 ## My Notes
-  - 
+  - On the home page select the two XML files and send.
+  - Built authentication with JWT.
+  - I returned the endpoints in JSON, however I was in doubt if it should be in XML.
+  - Any questions call me.
 
 > Author: <strong>Victor Willer Pacífico Barbosa</strong>
 
