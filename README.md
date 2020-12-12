@@ -7,6 +7,7 @@ Test for Invillia
   3. `sudo docker-compose exec --user=laradock workspace bash`
   4. `composer install`
   5. `php artisan migrate --seed`
+  6. `php artisan storage:link`
 
 ## Run the application
   - Access http://localhost:8081

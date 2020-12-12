@@ -29,8 +29,9 @@ class PeoplesController extends Controller
         $model->name = $person->personname;
         try {
             $model->save();
-        } catch(QueryException $e) {
-            echo $e;
+        } catch(\Exception $e) {
+            echo 'Duplicate entry, excuse me clean up the database and try again.';
+            exit;
         }
         
         return $model->id;

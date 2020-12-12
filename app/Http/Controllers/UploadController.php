@@ -32,7 +32,7 @@ class UploadController extends Controller
         if(isset($filesConverts['shiporder']))
             $saveOrders = $this->orders->store($filesConverts['shiporder']);
 
-        return ($savePeople && $saveOrders) ? view('home')->with(['success'=>'Finish process ok']) : false;
+        return ($savePeople && $saveOrders) ? view('index')->with(['success'=>'Upload completed!']) : false;
     }
 
     private function processFiles($filesReceived) {

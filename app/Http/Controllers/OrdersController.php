@@ -29,7 +29,12 @@ class OrdersController extends Controller
         $model              = new Orders();
         $model->id          = $order->orderid;
         $model->people_id   = $order->orderperson;
-        $model->save();
+        try {
+            $model->save();
+        } catch(\Exception $e) {
+            echo 'Entry with xml of the peoples first.';
+            exit;
+        }
         
         return $model->id;
     }
