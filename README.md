@@ -2,12 +2,13 @@
 Test for Invillia
 
 ## Instructions for install
-  1. Acess path laradoc `cd laradoc`
-  2. `sudo docker-compose up -d nginx mysql phpmyadmin`
-  3. `sudo docker-compose exec --user=laradock workspace bash`
-  4. `composer install`
-  5. `php artisan migrate --seed`
-  6. `php artisan storage:link`
+  1. Create .env of the laradock `cp .env.example.laradock laradock/.env`
+  2. Acess path laradoc `cd laradock`
+  3. `sudo docker-compose up -d nginx mysql phpmyadmin`
+  4. `sudo docker-compose exec --user=laradock workspace bash`
+  5. `composer install`
+  6. `php artisan migrate --seed`
+  7. `php artisan storage:link`
 
 ## Run the application
   - Access http://localhost:8081
