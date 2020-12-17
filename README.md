@@ -2,7 +2,7 @@
 Test for Invillia
 
 ## Instructions for install
-  1. Acess path laradoc `cd laradoc`
+  1. Acess path laradoc `cd laradock`
   2. `sudo docker-compose up -d nginx mysql phpmyadmin`
   3. `sudo docker-compose exec --user=laradock workspace bash`
   4. `composer install`
